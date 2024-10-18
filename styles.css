@@ -1,0 +1,257 @@
+
+
+body {
+    font-size: 20px;
+    background-color: #66a1bc;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    font-family: monospace; 
+    display: flex;  
+    flex-direction: column;
+    padding-top: 70px;
+  }
+  main {
+    flex: 1; 
+    padding: 20px;
+    padding-top: 70px;
+  }
+
+p {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(15, 15, 90);
+  }
+  .section-title{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(15, 15, 90);
+  }
+
+  .entry-title{
+    color: rgb(15, 15, 90);
+  }
+ul {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(15, 15, 90);
+  padding-left: 80px;
+  list-style-position: inside;
+}
+
+li{
+  margin-left: 0;
+}
+
+
+
+.class {
+    color: red;
+    background-color: blue;
+  }
+
+#id {
+    color: green;
+    background-color: yellow;
+    }
+
+p.title {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    }
+    
+h1#main-title {
+    color: red;
+    background-color: blue;
+    }
+
+    
+a:link {
+    color: rgb(144, 144, 244);
+    text-decoration: underline;
+    }
+    
+a:visited {
+    color: purple;
+    }
+
+a:active {
+        color: red;
+      }
+      
+a:hover {
+        color: blue;
+        text-decoration: none;
+      }
+      
+input:focus {
+        border: 1px solid #aaa;
+      }
+      
+      
+.titles {
+        color: #176844;
+      }
+#special {
+        color: #000;
+      }
+      
+#special p {
+        font-weight: bold;
+      }
+      
+#special h1 {
+        font-size: 25px;
+      }
+
+/* Navbar container styling */
+.navbar {
+  background-color: #66a1bc; /* Baby blue background */
+  padding: 20px 0; /* Space above and below the navbar */
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; /* Ensures the navbar stays above other content */
+}
+
+/* Styling the logo link */
+.navbar .logo a {
+  color: #800080; /* Purple color for the logo */
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Remove bullets and center-align the nav list */
+.navbar .nav-list {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+}
+
+/* Space out the nav items */
+.navbar .nav-list li {
+  margin: 0 15px; /* Space between each link */
+}
+
+/* Link styling */
+.navbar .nav-list li a {
+  text-decoration: none; /* Remove underline */
+  color: #800080; /* Purple text color */
+  font-weight: bold;
+}
+
+/* Hover effect for links */
+.navbar .nav-list li a:hover {
+  color: #4B0082; /* Darker purple on hover */
+  text-decoration: underline;
+}
+
+
+/* General styling for the page title */
+.page-title {
+  color: #333;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 20px;
+}
+.entry-title { 
+  text-align: center;
+}
+.about-image img{
+  width: 75%;
+  height: auto;
+  display: block;
+  border: 2px solid gray;
+  border-radius: 10px;
+  border-style:double;
+  margin: 0 auto;
+  clip-path: circle(50% at 50% 50%);
+}
+.project img{
+  width: 50%;
+  height: auto;
+  display: block;
+  border: 10px;
+  border-width: 5px;
+  border-style:groove;
+  margin: 0 auto;
+  border-color: rgb(251, 231, 231);
+}
+
+.project{
+  text-align: center;
+}
+
+footer{
+  color: rgb(170, 95, 95);
+  padding: 10px 0;
+  font-size: 11px;
+  text-align: center; 
+  position:relative;
+  margin-top: auto;
+ 
+}
+.contact-form{
+  text-align: center;
+}
+form{
+  text-align: center;
+}
+.skills-list{
+   list-style-type: disc; /* Keep bullet points */
+   padding-left: 0; /* Remove default padding */
+   margin-left: 0; /* Remove default margin */
+   text-align: center; /* Centers the text */
+}
+
+.activities-list{
+    list-style-type: disc; /* Keep bullet points */
+    padding-left: 0; /* Remove default padding */
+    margin-left: 0; /* Remove default margin */
+    text-align: center; /* Centers the text */
+
+}
+
+.course-list{
+    list-style-type: disc; /* Keep bullet points */
+    padding-left: 0; /* Remove default padding */
+    margin-left: 0; /* Remove default margin */
+    text-align: center; /* Centers the text */
+
+}
+
+.course-list li{
+ 
+    display: inline-block; /* Treat each list item like an inline block */
+    text-align: left; /* Align text inside each list item to the left */
+    width: auto; /* Adjust as needed or specify a width to control the list width */
+    margin-left: 20px; /* Optional: adjust the bullet point spacing */
+}
+
+
+.acitivites-list li{
+ 
+    display: inline-block; /* Treat each list item like an inline block */
+    text-align: left; /* Align text inside each list item to the left */
+    width: auto; /* Adjust as needed or specify a width to control the list width */
+    margin-left: 20px; /* Optional: adjust the bullet point spacing */
+
+}
+
+.skills-list li{
+    display: inline-block; /* Treat each list item like an inline block */
+    text-align: left; /* Align text inside each list item to the left */
+    width: auto; /* Adjust as needed or specify a width to control the list width */
+    margin-left: 20px; /* Optional: adjust the bullet point spacing */
+
+}
