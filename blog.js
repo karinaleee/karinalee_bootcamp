@@ -11,7 +11,7 @@ var blogs = [
             title: "Karina's Blog", 
             date: "10/20/2024", 
             description: "About me blog", 
-            image: "blog.jpg", 
+            image: "IMG_6219.jpg",
             imageAlt: "Here my issue", 
             slug: "blog.com"
         
@@ -42,7 +42,7 @@ var blogs = [
         
             const blogImage = document.createElement("img");
             blogImage.src = blog.image; 
-            blogImage.width = 350;
+            blogImage.width = 250;
             blogImage.height = 250; 
             blogImage.alt = "Image ${blog.title}"
             blogDiv.appendChild(blogImage);
@@ -51,6 +51,8 @@ var blogs = [
             blogSlug.href = blog.slug;
             blogSlug.textContent = "Read this too"; 
             blogDiv.appendChild(blogSlug);
+
+            blogContainer && blogContainer.appendChild(blogDiv); 
         
 
         });
