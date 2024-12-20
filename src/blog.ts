@@ -18,9 +18,9 @@ const blog: Blog[] = [
 
 ];
 
-function appendBlogsToContainer(){
+// function appendBlogsToContainer(){
     const blogContainer = document.getElementById('blog-container');
-}
+
 blog.forEach(blog => {
 	const blogDiv = document.createElement("div");
     blogDiv.className = "blog-post";
@@ -44,13 +44,15 @@ blog.forEach(blog => {
     blogImage.src = blog.image; 
     blogImage.width = 250;
     blogImage.height = 250; 
-    blogImage.alt = "Image ${blog.title}"
+    blogImage.alt = `Image ${blog.title}`
     blogDiv.appendChild(blogImage);
     
     const blogSlug = document.createElement("a"); 
     blogSlug.href = blog.slug;
     blogSlug.textContent = "Read this too"; 
     blogDiv.appendChild(blogSlug);
+    
+    blogContainer.appendChild(blogDiv); 
 
 
 });
