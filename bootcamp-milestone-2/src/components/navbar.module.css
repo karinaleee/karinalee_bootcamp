@@ -1,0 +1,22 @@
+
+.navbar{
+    font-size: large;
+    font-family: "Times New Roman", Times, serif;
+    color: #85d4ee ;
+  }
+  .nav_list{
+    display:flex;
+    justify-content: center;
+    width:100vw;
+  
+  }
+  .page_title{
+    font-family: "Times New Roman", Times, serif;
+    color:rgb(216, 147, 147);
+    text-align: center;
+    width:100vw;
+  }
+  .link{
+    width: 20vw;
+    text-align:center;
+  }
