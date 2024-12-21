@@ -1,4 +1,4 @@
-type Blog = {
+export type Blog = {
     title: string; 
     date: string; 
     description: string; 
@@ -52,7 +52,9 @@ blog.forEach(blog => {
     blogSlug.textContent = "Read this too"; 
     blogDiv.appendChild(blogSlug);
     
-    blogContainer.appendChild(blogDiv); 
+    // blogContainer.appendChild(blogDiv); 
 
 
 });
+
+export default blog;
