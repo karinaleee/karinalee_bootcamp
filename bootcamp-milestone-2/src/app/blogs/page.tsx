@@ -1,13 +1,20 @@
 import React from 'react';
-import "@/app/full.css";
-import BlogPreview from "@/components/blogPreview/blogPreview";
-import getBlogs from '@/app/blogData';
-import type { Blog } from "@/app/blogData";
-import link from 'next/link';
+import styles from "@/app/blog/page.module.css";
+import { blog } from "@/app/static/blogData"; // Import the actual blog array
+import BlogPreview from '@/components/blogPreview/blogPreview'; 
+import Footer from "@/components/footer/footer";
 
-
-
-
-export default async function BlogPage() {
- 
+export default function BlogPage() {
+  return (
+    <main>
+      <div className={styles.blogPage}>
+        <div className={styles.blogList}>
+          {blog.map((item) => ( 
+            <BlogPreview key={item.slug} blog={item} />
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </main>
+  );
 }
