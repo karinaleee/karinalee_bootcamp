@@ -1,62 +1,65 @@
-export interface Blog {
+export type Blog = {
     title: string;
-    date: string;
+    date: Date;
     description: string;
     image: string;
     imageAlt: string;
     slug: string; // URL name to redirect to specific page
-  }
+    content: string;
+  };
   
-  export const blog: Blog[] = [
+  const blog: Blog[] = [
     {
       title: "Karina's Blog",
-      date: "10/20/2024",
+      date: new Date("2024-09-12"),
       description: "About me blog",
       image: "IMG_6219.jpg",
       imageAlt: "Here my issue",
       slug: "https://blog.com",
+      content: "Hi this is the blog"
     },
+  
   ];
   
-  // Function to append blogs to a container
-  function appendBlogsToContainer() {
-    const blogContainer = document.getElementById("blog-container");
-    if (!blogContainer) {
-      console.error("Blog container not found!");
-      return;
-    }
+  // // Function to append blogs to a container
+  // function appendBlogsToContainer() {
+  //   const blogContainer = document.getElementById("blog-container");
+  //   if (!blogContainer) {
+  //     console.error("Blog container not found!");
+  //     return;
+  //   }
   
-    blog.forEach((blog) => {
-      const blogDiv = document.createElement("div");
-      blogDiv.className = "blog-post";
+  //   blog.forEach((blog) => {
+  //     const blogDiv = document.createElement("div");
+  //     blogDiv.className = "blog-post";
   
-      const blogTitle = document.createElement("h1");
-      blogTitle.textContent = blog.title;
-      blogDiv.appendChild(blogTitle);
+  //     const blogTitle = document.createElement("h1");
+  //     blogTitle.textContent = blog.title;
+  //     blogDiv.appendChild(blogTitle);
   
-      const blogDate = document.createElement("p");
-      blogDate.textContent = blog.date;
-      blogDiv.appendChild(blogDate);
+  //     const blogDate = document.createElement("p");
+  //     blogDate.textContent = blog.date;
+  //     blogDiv.appendChild(blogDate);
   
-      const blogDescription = document.createElement("p");
-      blogDescription.textContent = blog.description;
-      blogDiv.appendChild(blogDescription);
+  //     const blogDescription = document.createElement("p");
+  //     blogDescription.textContent = blog.description;
+  //     blogDiv.appendChild(blogDescription);
   
-      const blogImage = document.createElement("img");
-      blogImage.src = blog.image;
-      blogImage.width = 250;
-      blogImage.height = 250;
-      blogImage.alt = blog.imageAlt;
-      blogDiv.appendChild(blogImage);
+  //     const blogImage = document.createElement("img");
+  //     blogImage.src = blog.image;
+  //     blogImage.width = 250;
+  //     blogImage.height = 250;
+  //     blogImage.alt = blog.imageAlt;
+  //     blogDiv.appendChild(blogImage);
   
-      const blogSlug = document.createElement("a");
-      blogSlug.href = blog.slug;
-      blogSlug.textContent = "Read this too";
-      blogDiv.appendChild(blogSlug);
+  //     const blogSlug = document.createElement("a");
+  //     blogSlug.href = blog.slug;
+  //     blogSlug.textContent = "Read this too";
+  //     blogDiv.appendChild(blogSlug);
   
-      blogContainer.appendChild(blogDiv);
-    });
-  }
+  //     blogContainer.appendChild(blogDiv);
+  //   });
+  // }
   
   export default blog;
   

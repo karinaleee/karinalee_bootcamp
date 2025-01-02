@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from "next/image";
-import type { Blog } from "@/app/blogData";
+import { blog } from "@/app/static/blogData";
 import style from './blogPreview.module.css';
 import Link from 'next/link';
 
 // Component for blog, it iterates through all the blogs from blog data and displays them
-export default function BlogPreview(props: Blog) {
+export default function BlogPreview(props: BlogObject) {
   return (
     <Link href={`/blog/${props.slug}`}>
       <div className={style.previewContainer}>
