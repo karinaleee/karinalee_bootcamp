@@ -2,6 +2,7 @@ import React from "react";
 import BlogPreview from "@/components/blogPreview/blogPreview";
 import connectDB from "@/database/db";
 import BlogModel, {BlogObject} from "@/database/blogSchema";
+import styles from "@/app/contact/page.module.css";
 
 
 async function getBlogs() {
@@ -36,7 +37,7 @@ export default async function Blog(){
                 description={blog.description}
                 image={blog.image}
                 content = {blog.content}
-                imageAlt={blog.image_alt}/>
+                image_alt={blog.image_alt}/>
                )}
             </div> 
         </main>

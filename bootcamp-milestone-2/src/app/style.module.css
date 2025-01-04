@@ -1,0 +1,40 @@
+.pageTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: #0077B6;
+    font-family: Verdana, sans-serif;
+    padding: 50px;
+    font-style: italic;
+  
+    font-weight: bold;
+  }
+
+
+  .about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 200px;
+    padding-left:200px;
+  }
+  
+  .about-image img {
+    border-radius: 3px;
+  }
+  
+  .aboutText {
+    flex: 1;
+    margin-left: 20px;
+    color: #0077B6;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    max-width: 900px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+
+
+

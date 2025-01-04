@@ -1,27 +1,28 @@
-import React from 'react';
+import React from "react";
 import Image from "next/image";
-import { blog } from "@/app/static/blogData";
-import style from './blogPreview.module.css';
-import Link from 'next/link';
+import Link from "next/link";
+import { BlogObject } from "@/database/blogSchema";
 
-// Component for blog, it iterates through all the blogs from blog data and displays them
 export default function BlogPreview(props: BlogObject) {
   return (
-    <Link href={`/blog/${props.slug}`}>
-      <div className={style.previewContainer}>
-        <h3 className={style.title}>{props.title}</h3>
-        <div className={style.content}>
-          <Image
-            src={props.image || "/bootcamp-milestone-2/src/app/IMG_6219.jpg"} // Replace with a default image if `props.image` is undefined
-            alt="Project image"
-            width={250}
-            height={250}
-            className={style.image}
-          />
-          <p className={style.description}>{props.description}</p>
-          <p className={style.date}>{props.date}</p>
-        </div>
+    <div className="blog-element">
+      <Link href={"/blog/" + props.slug}>
+        <a>
+          <h2>{props.title}</h2>
+        </a>
+      </Link>
+      <div className="blog-img">
+        <Image
+          src={props.image}
+          alt={props.image_alt}
+          width={500}
+          height={500}
+        />
       </div>
-    </Link>
+      <div className="blog-text">
+        <p>{props.description}</p>
+        <p>{props.date ? props.date.toDateString() : "Date not available"}</p>
+      </div>
+    </div>
   );
 }

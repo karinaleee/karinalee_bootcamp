@@ -12,11 +12,16 @@
   }
   .page_title{
     font-family: "Times New Roman", Times, serif;
-    color:rgb(216, 147, 147);
+    color:rgb(193, 107, 107);
     text-align: center;
     width:100vw;
   }
   .link{
     width: 20vw;
     text-align:center;
+  }
+  .link:hover {
+    color: white; 
+    background-color: #85d4ee; 
+    border-radius: 5px; 
   }
