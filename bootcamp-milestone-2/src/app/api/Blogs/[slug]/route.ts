@@ -4,16 +4,17 @@ import connectDB from "@/database/db"
 import blogSchema from "@/database/blogSchema"
 
 type IParams = {
-		params: {
+		params: Promise<{
 			slug: string
-		}
+		}>
 }
 
 // If { params } looks confusing, check the note below this code block
 export async function GET(req: NextRequest, { params }: IParams) {
-    console.log("Incoming", params);
+    console.log("Incoming");
     await connectDB() // function from db.ts before
-		const { slug } = params // another destructure
+		const slug=(await params).slug;
+		//const { slug } = params // another destructure
         console.log("Querying", slug);
 
 	   try {

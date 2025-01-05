@@ -15,7 +15,7 @@ export default function Navbar() {
 			      Links are just Next.js wrapper arounds <a> elements anyways
          */}
         <Link className={style.link} href="/" >Home</Link>
-        <Link className={style.link} href="/blog">Blog</Link>
+        <Link className={style.link} href="/blogs">Blog</Link>
         <Link className={style.link} href="/resume">Resume</Link>
         <Link className={style.link} href="/contact" >Contact Me</Link>
         <Link className={style.link} href="/portfolio" >Portfolio</Link>

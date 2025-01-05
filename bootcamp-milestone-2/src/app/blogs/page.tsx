@@ -2,14 +2,16 @@ import React from "react";
 import BlogPreview from "@/components/blogPreview/blogPreview";
 import connectDB from "@/database/db";
 import BlogModel from "@/database/blogSchema";
-import styles from "@./page.module.css";
+import styles from "./page.module.css";
 
 
 async function getBlogs() {
+  console.log("1")
     await connectDB();
-
+    console.log("2")
     try {
         const blogs = await BlogModel.find().sort({date: -1}).orFail();
+        console.log("3")
         return blogs;
     } catch (err) {
         console.log(err);
