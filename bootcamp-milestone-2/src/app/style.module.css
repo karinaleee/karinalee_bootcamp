@@ -2,11 +2,10 @@
     display: flex;
     justify-content: center;
     font-size: 40px;
-    color: #0077B6;
-    font-family: Verdana, sans-serif;
+    color: #031b28;
+    font-family: 'Times New Roman', Times, serif;
     padding: 50px;
     font-style: italic;
-  
     font-weight: bold;
   }
 

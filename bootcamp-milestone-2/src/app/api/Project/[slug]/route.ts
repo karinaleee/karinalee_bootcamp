@@ -11,19 +11,13 @@ type IParams = {
 
 // If { params } looks confusing, check the note below this code block
 export async function GET(req: NextRequest, { params }: IParams) {
-    console.log("Incoming", params);
     await connectDB() // function from db.ts before
 		const { slug } = params // another destructure
-        console.log("Querying", slug);
 
 	   try {
 	        const blog = await blogSchema.findOne({ slug }).orFail()
-            console.log("Blog Found", blog);
 	        return NextResponse.json(blog)
-            
 	    } catch (err) {
 	        return NextResponse.json('Blog not found.', { status: 404 })
 	    }
-
-    
 }

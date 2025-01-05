@@ -10,12 +10,12 @@ export default function Resume() {
     <h1 className={styles.profile_name}>Karina Lee</h1>
     <p>Portland, Oregon | (503) 432 - 3954 | Email: klee396@calpoly.edu</p>
     <p>
-      <a href="https://www.linkedin.com/in/karina-lee-12kl/" className={styles.profile_link}>LinkedIn</a> | 
-      <a href="bootcamp-milestone-2/public/CAL POLY RESUME (5).pdf"
+      <a href="https://www.linkedin.com/in/karina-lee-12kl/" className={styles.profile_link}>LinkedIn</a> 
+      {/* <a href="bootcamp-milestone-2/public/CAL POLY RESUME (5).pdf"
           className={styles.downloadButton}
         >
           Download Resume
-        </a>
+        </a> */}
         
        
     </p>

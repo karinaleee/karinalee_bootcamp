@@ -2,6 +2,10 @@
     font-size: 36px;
     text-align: center;
     margin: 20px 0;
+    color: #052446;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
   }
   
   .contactForm {
@@ -30,7 +34,7 @@
   }
   
   .submit {
-    background-color: #505029;
+    background-color: #55c162;
     color: white;
     border: none;
     padding: 10px 10px;
@@ -39,5 +43,5 @@
   }
   
   .submit:hover {
-    background-color: #e09e56;
+    background-color: #515bb0;
   }

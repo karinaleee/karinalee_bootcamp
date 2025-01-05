@@ -1,8 +1,8 @@
 import React from "react";
 import BlogPreview from "@/components/blogPreview/blogPreview";
 import connectDB from "@/database/db";
-import BlogModel, {BlogObject} from "@/database/blogSchema";
-import styles from "@/app/contact/page.module.css";
+import BlogModel from "@/database/blogSchema";
+import styles from "@./page.module.css";
 
 
 async function getBlogs() {
@@ -13,34 +13,40 @@ async function getBlogs() {
         return blogs;
     } catch (err) {
         console.log(err);
-        return [];
+        return null;
     }
 
 }
 
 
-
-export default async function Blog(){
-
-    const blogList: BlogObject[] = await getBlogs();
-
-
-    return( 
-        <main>
-            <h1 className="page-title">Blog</h1>
-            <div id="blog-container">
-               {blogList.map(blog => 
-                <BlogPreview 
-                title={blog.title}
-                slug={blog.slug}
-                date={blog.date}
-                description={blog.description}
-                image={blog.image}
-                content = {blog.content}
-                image_alt={blog.image_alt}/>
-               )}
-            </div> 
-        </main>
+//blog = list 
+export default async function BlogHome() {
+    const blogs = await getBlogs();
+    if (!blogs) {
+      return <div> Blog Not Found </div>;
+    }
+    return (
+      <div>
+        <h1 className={styles.pageTitle}>Blogs</h1>
+        <div className={styles.blogContainer}>
+          {/* {blogs.map(blog =>
+                 <BlogPreview {...(blog as any)._doc} key={blog.title} />
+              )} */}
+  
+          {blogs.map((blog, index) => (
+            <div key={index} className={styles.blogPreview}>
+              <BlogPreview
+                      title={blog.title}
+                      date={blog.date}
+                      slug={blog.slug}
+                      description={blog.description}
+                      image={blog.image}
+                      image_alt={blog.image_alt} //comments={blog.comments}
+                              />
+            </div>
+          ))}
+        </div>
+      </div>
     );
-
+  
 }
