@@ -12,7 +12,7 @@ export default function Resume() {
     <p>
       <a href="https://www.linkedin.com/in/karina-lee-12kl/" className={styles.profile_link}>LinkedIn</a> | 
       <a href="/resume.pdf" 
-          download="bootcamp-milestone-2/src/app/CAL POLY RESUME (5).pdf"
+          download="\bootcamp-milestone-2\public\CAL POLY RESUME (5).pdf"
           className={styles.downloadButton}
         >
           Download Resume
@@ -98,6 +98,7 @@ export default function Resume() {
     </div>
   </section>
 </div>
+
 
 
   );

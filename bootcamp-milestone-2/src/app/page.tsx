@@ -17,7 +17,7 @@ export default function Home() {
       <div className={styles.about}>
         <div className={styles.aboutImage}>
           <Image
-            src="/bootcamp-milestone-2/src/app/IMG_7579.jpg"
+            src="\bootcamp-milestone-2\public\IMG_7579.jpg"
             alt="a pic of me"
             width={200}
             height={300}

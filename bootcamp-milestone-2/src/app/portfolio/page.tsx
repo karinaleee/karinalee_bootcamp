@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Image from "next/image";
 
 export default function Portfolio() {
   return (
@@ -8,9 +9,12 @@ export default function Portfolio() {
         <div className={styles.projectContainer}>
           <div className={styles.project}>
             <a href="/" className={styles.projectImageLink}>
-              <img
-                src="bootcamp-milestone-2/src/app/IMG_6219.jpg"
+            <Image
+                src="\bootcamp-milestone-2\public\IMG_7579.jpg" // Correct relative path for Next.js public folder
+                alt="Preview of Karina's personal website"
                 className={styles.projectImage}
+                width={400} // Specify dimensions for better optimization
+                height={300}
               />
             </a>
             <div className={styles.projectDetails}>
@@ -26,6 +30,8 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
+      
+        
       </main>
     </>
   );
