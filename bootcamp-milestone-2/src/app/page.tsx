@@ -16,12 +16,18 @@ export default function Home() {
       </h1>
       <div className={styles.about}>
         <div className={styles.aboutImage}>
-          <Image
-            src="\bootcamp-milestone-2\public\IMG_7579.jpg"
+          {/* <Image
+            src="/bootcamp-milestone-2\public\IMG_7579.jpg"
             alt="a pic of me"
             width={200}
             height={300}
-          />
+          /> */}
+          <img 
+            src="IMG_7579.jpg" 
+            alt="Preview of Karina's personal website" 
+            className="project-image"/>
+
+            {/* </img> */}
         </div>
         <div className={styles.aboutText}>
           <p>
