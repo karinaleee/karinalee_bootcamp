@@ -4,6 +4,21 @@ import Link from "next/link";
 import { Blog } from "@/database/blogSchema";
 import Image from "next/image";
 
+
+// export type Blog = {
+//   slug: string;
+//   title: string;
+//   date: string;
+//   description: string;
+//   image: string;
+//   image_alt?: string; // Optional in case it's not always provided
+//   comments?: {
+//     user: string;
+//     content: string;
+//     time: string;
+//   }[];
+// };
+
 export default function BlogPreview(props: Blog) {
 
   return (
@@ -16,7 +31,7 @@ export default function BlogPreview(props: Blog) {
            <div className={style.img}>
                 <Image
                     src={props.image}
-                    alt={props.image_alt || 'Image'}
+                    alt={props.image_alt || 'Image of Cat'}
                     width={200}
                     height={300}
                 />

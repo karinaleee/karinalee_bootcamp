@@ -5,6 +5,7 @@ import BlogModel from "@/database/blogSchema";
 import styles from "./page.module.css";
 
 
+
 async function getBlogs() {
   console.log("1")
     await connectDB();
@@ -48,5 +49,5 @@ export default async function BlogHome() {
         </div>
       </div>
     );
-  
+
 }

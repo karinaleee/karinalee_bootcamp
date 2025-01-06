@@ -48,12 +48,12 @@ export default async function Blog({params}: Props) {
    <h3 className={style.title}>{blog.title} </h3>
    <h3 className={style.date}> {new Date(blog.date).toLocaleDateString()}</h3>
    <div className={style.img}>
-                <Image
-                    src={blog.image}
-                    alt={blog.image_alt || 'Image'}
-                    width={200}
-                    height={300}
-                />
+			<Image
+			src="/cats.jpg"
+			alt="cat"
+			width={800}
+			height={600}
+			/>
           <div>
 	  </div>
 		<p className={style.description}>{blog.description}</p>
