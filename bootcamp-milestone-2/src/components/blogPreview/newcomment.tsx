@@ -45,7 +45,7 @@ export default function NewComment({ slug }: Props) {
     try {
    
       
-      const response = await fetch(`http://localhost:3000/api/Blogs/${slug}`, {
+      const response = await fetch(`api/Blogs/${slug}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
