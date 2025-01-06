@@ -83,7 +83,7 @@ export default function NewComment({ slug }: Props) {
   return (
 
     <div className= {style.commentSec}>
-      <h2>Leave a Comment!</h2>
+      <h2>Comment Here!</h2>
       <form className="formInfo" onSubmit={handleSubmit}>
         <div>
           <label >Name:</label>

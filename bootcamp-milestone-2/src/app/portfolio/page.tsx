@@ -77,9 +77,7 @@ export default async function ProjectHome() {
       <div>
         <h1 className={styles.pageTitle}>Projects</h1>
         <div className={styles.blogContainer}>
-          {/* {blogs.map(blog =>
-                 <BlogPreview {...(blog as any)._doc} key={blog.title} />
-              )} */}
+         
   
           {project.map((projects, index) => (
             <div key={index} className={styles.projectPreview}>

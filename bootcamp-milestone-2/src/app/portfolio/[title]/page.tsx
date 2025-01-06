@@ -352,11 +352,16 @@ import Footer from "@/components/footer/footer";
 import Comment from "@/components/project/comment"; 
 import NewComment from "@/components/project/newcomment"; 
 import React from "react";
-// Type definitions
+
 type Props = {
   params: Promise<{
     title: string;
   }>;
+};
+type commentType = {
+	user: string;
+	content: string;
+	time: Date;
 };
 // Function to fetch project data
 async function getProject(title: string) {
@@ -364,8 +369,8 @@ async function getProject(title: string) {
     const res = await fetch(`http://localhost:3000/api/Project/${title}`, {
       cache: "no-store",
     });
-    console.log("RESPNONCE",res)
-    // This checks that the GET request was successful
+    console.log("response - going thru?",res)
+  
     if (!res.ok) {
       throw new Error("Failed to fetch project");
     }
@@ -380,7 +385,7 @@ export default async function Project({ params }: Props) {
     const title = (await params).title;
     const project = await getProject(title);
     
-    // Handle case where project is not found
+ 
     if (!project) {
       return (
         <div className={style.errorPage}>
@@ -393,17 +398,17 @@ export default async function Project({ params }: Props) {
         <div className={style.info}>
           <div className={style.projectContent}>
             <h1 className={style.title}>{project.title}</h1>
-            <img
+            {/* <img
               className={style.photo}
               src={project.image}
-              alt={project.imageAlt || "Project Image"}
-            />
+              alt={project.imageAlt || "Proj. Image"}
+            /> */}
             <p className={style.description}>{project.description}</p>
           </div>
           <div className={style.commentSection}>
-            <h2 className={style.commentTitle}>COMMENT SECTION</h2>
+            <h2 className={style.commentTitle}>Comment Here!</h2>
             <div className={style.commentList}>
-              {project.comments.map((comment: any, index: number) => (
+              {project.comments.map((comment: commentType, index: number) => (
                 <Comment key={index} comment={comment} />
               ))}
             </div>
@@ -414,7 +419,7 @@ export default async function Project({ params }: Props) {
       </div>
     );
   } catch (error) {
-    console.error("Error rendering the project page:", error);
+    console.error("Error", error);
     return (
       <div className={style.errorPage}>
         <h1 className={style.pageTitle}>

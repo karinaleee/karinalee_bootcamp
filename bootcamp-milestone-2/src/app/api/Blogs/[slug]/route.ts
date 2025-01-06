@@ -12,9 +12,9 @@ type IParams = {
 
 export async function GET(req: NextRequest, { params }: IParams) {
     console.log("Incoming");
-    await connectDB() // function from db.ts before
+    await connectDB() 
 		const slug=(await params).slug;
-		//const { slug } = params // another destructure
+		
         console.log("Querying", slug);
 
 	   try {
@@ -28,7 +28,7 @@ export async function GET(req: NextRequest, { params }: IParams) {
 	    }
 }
 
-export async function POST(req: NextRequest, { params }: IParams) {//<--what does this do oh nvm refers to above
+export async function POST(req: NextRequest, { params }: IParams) {
 	console.log('params', req, params);
 	await connectDB()
 	const resparams  = await params;
@@ -37,33 +37,24 @@ export async function POST(req: NextRequest, { params }: IParams) {//<--what doe
 		console.log('entering post request')
 		const body = await req.json();// awaits the json request
 		const {user, content}=body;// extracts user and comment from the body
-		//console.log('USER  ',user)
-		//console.log('COMMENT  ',user)
-		//quries the bloc collections and looks for a blog with a slug that matches the slug of the resolved parameters
-		// orFail makes sure that it throws an error
+		
 		const blog= await blogSchema.findOne({slug: resparams.slug}).orFail();
-		//makes a new comment using a user comment and time input
+		
 		const newcomment={
 			user,
 			content,
 			time:new Date(),
 		};
-		//console.log('new comment                 ',newcomment)
-		//console.log('blog ', blog, ' comments ', blog.comments);
-
-
-		//pushing the new comment into the comments array for that suecific blog
-		// note that comments is the array of comments in a blog
+		
 		blog.comments.push(newcomment);
-		//console.log('RETURNING THE RESPONSE  ',user)
-		//saves change to database
+	
 		await blog.save();
-		console.log("FINISHED SAVING", blog);
-		// returns a next responce 
+		console.log("saved", blog);
+		
 		return NextResponse.json(newcomment);
 
 	} catch (error) {
-		// send a resoponce saying that the comment was not added and set an error status
+		
 		console.log("error           ", error)
 		return NextResponse.json(
 			

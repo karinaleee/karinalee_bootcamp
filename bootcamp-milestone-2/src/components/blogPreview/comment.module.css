@@ -1,35 +1,30 @@
 .commentContainer {
-    background-color: #ffffff; /* White background for individual comments */
+    background-color: #ffffff; 
     padding: 15px;
-    margin-bottom: 10px; /* Space between comments */
+    margin-bottom: 10px;
     border-radius: 8px;
-    border: 1px solid #ddd; /* Light border to separate comments */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    font-family: Arial, sans-serif;
-    transition: transform 0.2s ease;
+    border: 1px solid #ddd; 
+    font-family: 'Times New Roman', Times, serif;
   }
   
-  .commentContainer:hover {
-    transform: translateY(-2px); /* Slight lift on hover for interactivity */
-  }
   
   .commentUser {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333; /* Darker color for the username */
+    color: #333; 
     margin-bottom: 5px;
   }
   
   .commentContent {
     font-size: 1rem;
-    color: #555; /* Slightly muted text for the comment content */
+    color: #555; 
     line-height: 1.5;
     margin-bottom: 10px;
   }
   
   .commentTime {
     font-size: 0.85rem;
-    color: #888; /* Gray for timestamp */
+    color: #888; 
     text-align: right;
     margin-top: 10px;
     font-style: italic;

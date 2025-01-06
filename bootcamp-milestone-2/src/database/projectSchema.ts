@@ -22,7 +22,6 @@ export type Project = {
 };
 
 
-// mongoose schema 
 const projectSchema = new Schema<Project>({
 		title: { type: String, required: true },
 		skills: { type: String, required: true },
@@ -32,7 +31,7 @@ const projectSchema = new Schema<Project>({
 
 })
 
-// defining the collection and model
+
 const ProjectModel = mongoose.models['projects'] ||
     mongoose.model('projects', projectSchema);
 

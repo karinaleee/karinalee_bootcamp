@@ -11,19 +11,18 @@ const commentSchema = new Schema<IComment>({
     time: { type: Date, required: true, default: new Date()}
 })
 
-// typescript type (can also be an interface)
+
 export type Blog = {
 		title: string;
 		slug: string; 
 		date: Date;
-		description: string; // for preview
-		image: string; // url for string in public
-		image_alt: string; // alt for image
+		description: string;
+		image: string; //web url if public if not put in public folder
+		image_alt: string;
 		comments: IComment[];
 };
 
 
-// mongoose schema 
 const blogSchema = new Schema<Blog>({
 		title: { type: String, required: true },
 		slug: { type: String, required: true },
@@ -34,7 +33,7 @@ const blogSchema = new Schema<Blog>({
 		comments: [commentSchema],
 })
 
-// defining the collection and model
+
 const BlogModel = mongoose.models['blogs'] ||
     mongoose.model('blogs', blogSchema);
 

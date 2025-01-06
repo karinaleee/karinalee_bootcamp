@@ -12,18 +12,18 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    //vars for constants
+    //specific vars
     const serviceID = "service_pec4xvk";
     const templateID = "template_jxlrivx";
     const publicKey = "RDZYeXRABoJlBedli";
-    // parameter templace
+   
     const templateParms = {
       from_name: name,
       from_email: email,
       to_name: "Karina Lee",
       message: message,
     };
-    //code to send email
+  
     emailjs.send(serviceID, templateID,templateParms,publicKey) 
            .then((response)=>{
             console.log('email sent successfully',response);
@@ -37,7 +37,7 @@ export default function Contact() {
   }
 
   return (
-    <div className={styles.masterContainer}>
+    <div className={styles.mainContainer}>
 
       <div className={styles.container}>
 
@@ -94,14 +94,10 @@ export default function Contact() {
           <h1 className={styles.title}>Let's Connect:</h1>
          
           <a
-            // href="https://www.linkedin.com/in/karina-lee-12kl/"
-            // target="_blank"
-            // rel="noopener noreferrer"
-            // className={styles.link}
 
           >
              <a href="https://www.linkedin.com/in/karina-lee-12kl/" className={styles.profile_link}>Click Here For My LinkedIn</a> 
-          {/* <img className={styles.portrait} src='linkedin.jpg' alt="portrait"  style={{ width: '40px', height: 'auto' }}/> */}
+
           </a>
 
 

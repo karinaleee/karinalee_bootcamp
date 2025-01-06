@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import style from "./newcomment.module.css";
-//type definitions
+
 type commentData = {
   user: string;
   content: string;
@@ -12,9 +12,7 @@ type Props = {
 };
 
 export default function NewComment({ title }: Props) {
-  //   const [error, setError] = useState("");
-  // creting constant for the new comment data and the status of the form input
-  //console.log("entering the new comment function")
+  
   const [formData, setformData] = useState<commentData>({
     user: "",
     content: "",
@@ -23,8 +21,8 @@ export default function NewComment({ title }: Props) {
 
   
 
-  const [status, setStatus] = useState("");//2eqwrg
-  // only reacts to chenges in input or textarea
+  const [status, setStatus] = useState("");
+ 
   console.log('status    ',status)
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -37,10 +35,8 @@ export default function NewComment({ title }: Props) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("in handle submit")
-    // both comment and user have inputs
-    console.log("entering try")
-    //console.log("slug       ",title)
+  
+   
     try {
      
       
@@ -57,7 +53,7 @@ export default function NewComment({ title }: Props) {
         throw new Error("Failed to add comment.");
       }
 
-      //setStatus("submitted");
+     
       setformData({ user: "", content: "" });
     } catch (error) {
       console.log("error", error);

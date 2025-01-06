@@ -1,4 +1,4 @@
-// import style from './blg.module.css'
+
 import style from "./page.module.css";
 import Comment from "@/components/blogPreview/comment";
 import NewComment from "@/components/blogPreview/newcomment";

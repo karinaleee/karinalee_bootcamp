@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "@/components/footer/footer";
 import styles from "@/app/resume/page.module.css";
 
 export default function Resume() {
@@ -11,11 +10,7 @@ export default function Resume() {
     <p>Portland, Oregon | (503) 432 - 3954 | Email: klee396@calpoly.edu</p>
     <p>
       <a href="https://www.linkedin.com/in/karina-lee-12kl/" className={styles.profile_link}>LinkedIn</a> 
-      {/* <a href="bootcamp-milestone-2/public/CAL POLY RESUME (5).pdf"
-          className={styles.downloadButton}
-        >
-          Download Resume
-        </a> */}
+     
         
        
     </p>

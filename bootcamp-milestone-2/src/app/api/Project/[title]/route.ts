@@ -60,7 +60,6 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import connectDB from "@/database/db"
-// import blogSchema from "@/database/projectSchema"
 import projectSchema from '@/database/projectSchema'
 
 type IParams = {
@@ -72,7 +71,7 @@ type IParams = {
 
 export async function GET(req: NextRequest, { params }: IParams) {
     console.log("Incoming");
-    await connectDB() // function from db.ts before
+    await connectDB() 
 		const title=(await params).title;
 		
 		try {
@@ -93,7 +92,7 @@ export async function POST(req: NextRequest, { params }: IParams) {
 		try {
 		
 			const body = await req.json();// awaits the json request
-			const {user, content}=body;// extracts user and comment from the body
+			const {user, content}=body;
 		
 			const title= await projectSchema.findOne({title: resparams.title}).orFail();
 		
