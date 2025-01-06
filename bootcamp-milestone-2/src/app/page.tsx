@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/app/style.module.css";
 import Footer from "@/components/footer/footer";
+import Image from "next/image";
 
 
 export default function Home() {
@@ -16,12 +17,12 @@ export default function Home() {
       <div className={styles.about}>
         <div className={styles.aboutImage}>
      
-          <img 
-            src="IMG_7579.jpg" 
+        <Image 
+            src="/IMG_7579.jpg" 
             alt="Preview of Karina's personal website" 
-            className="project-image"/>
-
-            {/* </img> */}
+            width={800} // Adjust width as needed
+            height={600} // Adjust height as needed
+        />
         </div>
         <div className={styles.aboutText}>
           <p>

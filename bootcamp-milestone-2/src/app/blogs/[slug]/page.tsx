@@ -4,6 +4,7 @@ import Comment from "@/components/blogPreview/comment";
 import NewComment from "@/components/blogPreview/newcomment";
 import connectDB from "@/database/db";
 import BlogModel from "@/database/blogSchema";
+import Image from "next/image";
 
 type commentType = {
 	user: string;
@@ -46,10 +47,14 @@ export default async function Blog({params}: Props) {
 		<div>	
    <h3 className={style.title}>{blog.title} </h3>
    <h3 className={style.date}> {new Date(blog.date).toLocaleDateString()}</h3>
-	<img className={style.photo}
-		  src={blog.image} 
-		  alt={blog.image_alt || 'Image'} />
-		
+   <div className={style.img}>
+                <Image
+                    src={blog.image}
+                    alt={blog.image_alt || 'Image'}
+                    width={200}
+                    height={300}
+                />
+          <div>
 	  </div>
 		<p className={style.description}>{blog.description}</p>
 
@@ -65,6 +70,8 @@ export default async function Blog({params}: Props) {
 		</div>
 
 	 <NewComment slug={slug}/>		  
+  </div>
+  </div>
   </div>
 	  );
 	}
