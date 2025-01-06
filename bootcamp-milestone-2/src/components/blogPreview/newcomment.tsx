@@ -45,7 +45,7 @@ export default function NewComment({ slug }: Props) {
     try {
    
       
-      const response = await fetch(`api/Blogs/${slug}`, {
+      const response = await fetch(`https://karinalee-bootcamp-97e9.vercel.app//api/Blogs/${slug}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
