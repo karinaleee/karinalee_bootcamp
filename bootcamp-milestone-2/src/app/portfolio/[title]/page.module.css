@@ -1,0 +1,69 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto; 
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f9f9f9; 
+    border-radius: 10px;
+  }
+ 
+  .pageTitle {
+    text-align: center;
+    font-size: 2rem;
+    color: #555;
+  }
+  
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  
+  .title strong {
+    color: #007bff; 
+  }
+  
+  
+  .content1,
+  .content2 {
+    font-size: 1rem;
+    color: #555; 
+    line-height: 1.6;
+  }
+  
+  
+  .comment {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .comment p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  
+  .commentSec {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  

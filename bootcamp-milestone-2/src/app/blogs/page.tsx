@@ -31,9 +31,7 @@ export default async function BlogHome() {
       <div>
         <h1 className={styles.pageTitle}>Blogs</h1>
         <div className={styles.blogContainer}>
-          {/* {blogs.map(blog =>
-                 <BlogPreview {...(blog as any)._doc} key={blog.title} />
-              )} */}
+       
   
           {blogs.map((blog, index) => (
             <div key={index} className={styles.blogPreview}>
@@ -43,7 +41,8 @@ export default async function BlogHome() {
                       slug={blog.slug}
                       description={blog.description}
                       image={blog.image}
-                      image_alt={blog.image_alt} //comments={blog.comments}
+                      image_alt={blog.image_alt} 
+                      comments={blog.comments}
                               />
             </div>
           ))}

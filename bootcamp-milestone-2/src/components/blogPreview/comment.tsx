@@ -1,15 +1,22 @@
 import React from "react";
-import { IComment } from "@/database/projectSchema";
-import style from "../blogPreview/comment.module.css";
+import { IComment } from "@/database/blogSchema";
+import style from "./comment.module.css";
 
-
+{/* When we pass props, the name that we use to pass values
+		is the key for the type
+*/}
 type CommentProps = {
     comment: IComment;
 }
 
-function parseCommentTime(time: Date){
 
-    
+{/* Modularizing code into seperate functions is useful.
+		Makes your code look nicer and allows for better readability.
+	*/}
+function parseCommentTime(time: Date){
+	/*
+		Implementation up to you...
+	*/
     return new Date(time).toDateString();
 }
 

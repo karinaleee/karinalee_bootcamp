@@ -67,7 +67,7 @@ async function getProject() {
 }
 
 
-//blog = list 
+
 export default async function ProjectHome() {
     const project = await getProject();
     if (!project) {
@@ -88,7 +88,7 @@ export default async function ProjectHome() {
                     skills={projects.skills}
                     content1={projects.content1}
                     content2={projects.content2}
-                    // comments={projects.comments}
+                    comments={projects.comments}
                     />
             </div>
           ))}

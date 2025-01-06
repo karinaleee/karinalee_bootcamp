@@ -1,47 +1,102 @@
-.pageTitle {
-    font-size: 36px;
-    text-align: center;
-    margin: 20px 0;
-    color: #052446;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    
+
+.masterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.container {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #004d40;
+  text-align: center;
+}
+
+
+.contactMe {
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #00695c;
+}
+
+
+
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #004d40;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #00695c;
+  transform: scale(1.05);
+}
+
+
+.socialLinks {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.socialLinks .link {
+  color: #004d40;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.socialLinks .link:hover {
+  color: #00695c;
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.8rem;
   }
-  
-  .contactForm {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 400px;
-    margin: 0 auto;
+
+  .button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
   }
-  
-  .label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .input,
-  .textarea {
-    padding: 10px;
-    border: 1px solid #cbcbcb;
-    border-radius: 5px;
-  }
-  
-  .textarea {
-    resize: vertical;
-    height: 100px;
-  }
-  
-  .submit {
-    background-color: #55c162;
-    color: white;
-    border: none;
-    padding: 10px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .submit:hover {
-    background-color: #515bb0;
-  }
+}
+ 
