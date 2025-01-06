@@ -85,7 +85,7 @@ export default function NewComment({ title }: Props) {
           />
         </div>
 
-        <button type="submit">Submit Comment</button>
+        <button type="submit">Submit</button>
       </form>
       {status && <p className={style.status}></p>}
     
