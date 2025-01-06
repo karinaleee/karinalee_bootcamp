@@ -366,7 +366,7 @@ type commentType = {
 // Function to fetch project data
 async function getProject(title: string) {
   try {
-    const res = await fetch(`/api/Project/${title}`, {
+    const res = await fetch(`https://karinalee-bootcamp-97e9.vercel.app/api/Project/${title}`, {
       cache: "no-store",
     });
     console.log("response - going thru?",res)
