@@ -110,6 +110,7 @@ export async function POST(req: NextRequest, { params }: IParams) {
 	
 		} catch (error) {
 
+			console.log("error adding:", error)
 			return NextResponse.json(
 				
 				{error:"Failed to add comment"},

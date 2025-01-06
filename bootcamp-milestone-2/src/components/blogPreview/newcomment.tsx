@@ -1,7 +1,6 @@
 "use client";
 import React, { useState} from "react";
 import style from "./newcomment.module.css";
-import Comment from "./comment";
 
 //type definitions
 type commentData = {
@@ -25,9 +24,8 @@ export default function NewComment({ slug }: Props) {
 
 
   
-//test
   const [status, setStatus] = useState("");
-  // only reacts to chenges in input or textarea
+
 
   console.log('status  1  ',status)
   const handleInputChange = (
@@ -37,19 +35,15 @@ export default function NewComment({ slug }: Props) {
     setformData((form) => ({ ...form, [name]: value }))
   };
   
-        // useEffect(()=>{
-        //   Comment;
-        //   console.log("use effect entered")
-        // }, [status]);
-
+ 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log("in handle submit")
-    // both comment and user have inputs
+    
     console.log("entering try")
-   // console.log("slug       ",slug)
+   
     try {
-      //                                this may change
+   
       
       const response = await fetch(`http://localhost:3000/api/Blogs/${slug}`, {
         method: "POST",

@@ -91,7 +91,7 @@ export default function Contact() {
         </div>
 
         <div className={styles.socialLinks}>
-          <h1 className={styles.title}>Let's Connect:</h1>
+          <h1 className={styles.title}>Connect with Link Below:</h1>
          
           <a
 

@@ -44,7 +44,7 @@ export default function Resume() {
       <p><strong>California Polytechnic State University - IT Department</strong> - San Luis Obispo, CA</p>
       <p> IT Specialist Cilent Services (Oct 2024 - Current)</p>
       <ul>
-        <li>Facilitated office hours to support students' understanding of Object-Oriented Programming conceptsTroubleshoot hardware and software issues for the Administration/President’s Office.</li>
+        <li>Facilitated office hours to supports&apos; students understanding of Object-Oriented Programming conceptsTroubleshoot hardware and software issues for the Administration/President’s Office.</li>
         <li>Strong proficiency in debugging operating systems, Windows and macOS</li>
       </ul>
     </div>

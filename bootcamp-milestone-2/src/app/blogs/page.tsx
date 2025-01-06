@@ -21,7 +21,6 @@ async function getBlogs() {
 }
 
 
-//blog = list 
 export default async function BlogHome() {
     const blogs = await getBlogs();
     if (!blogs) {

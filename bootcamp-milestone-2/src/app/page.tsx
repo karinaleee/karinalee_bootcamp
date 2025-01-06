@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import styles from "@/app/style.module.css";
 import Footer from "@/components/footer/footer";
 
@@ -12,16 +11,11 @@ export default function Home() {
         <ul className={styles.navList}></ul>
       </nav>
       <h1 className={styles.pageTitle}>
-        Welcome to Karina's Website!
+        Welcome to Karina&apos; s Website!
       </h1>
       <div className={styles.about}>
         <div className={styles.aboutImage}>
-          {/* <Image
-            src="/bootcamp-milestone-2\public\IMG_7579.jpg"
-            alt="a pic of me"
-            width={200}
-            height={300}
-          /> */}
+     
           <img 
             src="IMG_7579.jpg" 
             alt="Preview of Karina's personal website" 

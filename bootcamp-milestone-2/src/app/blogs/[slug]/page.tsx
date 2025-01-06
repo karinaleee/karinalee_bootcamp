@@ -23,6 +23,7 @@ async function getBlog(slug: string) {
 		const blog = await BlogModel.findOne( { slug } ).orFail();
 		return blog;
 	} catch (err) {
+		console.log("empty list:", err)
 		return null;
 	}
 }
