@@ -47,6 +47,7 @@ export default function NewComment({ slug }: Props) {
       setStatus("submitted");
       setformData({ user: "", content: "" });
     } catch (error) {
+      console.log(error)
       setStatus("Comment failed");
     }
   };
