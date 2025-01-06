@@ -47,13 +47,15 @@ export default async function Blog({params}: Props) {
 		<div>	
    <h3 className={style.title}>{blog.title} </h3>
    <h3 className={style.date}> {new Date(blog.date).toLocaleDateString()}</h3>
-   <div className={style.img}>
+   		<div className={style.img}>
 			<Image
-			src="/cats.jpg"
-			alt="cat"
+			src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*A7MUqyCLvZDcHkfM.jpg"
+			alt="A cute cat"
 			width={800}
 			height={600}
 			/>
+		</div>	
+
           <div>
 	  </div>
 		<p className={style.description}>{blog.description}</p>
@@ -72,7 +74,7 @@ export default async function Blog({params}: Props) {
 	 <NewComment slug={slug}/>		  
   </div>
   </div>
-  </div>
+//   </div>
 	  );
 	}
 }

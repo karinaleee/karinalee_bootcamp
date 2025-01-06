@@ -11,22 +11,30 @@ type IParams = {
 
 
 export async function GET(req: NextRequest, { params }: IParams) {
-    console.log("Incoming");
-    await connectDB() 
-		const slug=(await params).slug;
-		
-        console.log("Querying", slug);
+    console.log("Incoming GET request");
 
-	   try {
-	        const blog = await blogSchema.findOne({ slug }).orFail()
-            console.log("Blog Found", blog);
-	        return NextResponse.json(blog)
-            
-	    } catch (err) {
-			console.log(err)
-	        return NextResponse.json('Blog not found.', { status: 404 })
-	    }
+    await connectDB();
+    const slug = (await params).slug;
+
+    console.log("Querying blog with slug:", slug);
+
+    // Validate slug
+    if (!slug || typeof slug !== 'string') {
+        console.error("Invalid slug parameter:", slug);
+        return NextResponse.json({ error: 'Invalid slug parameter.' }, { status: 400 });
+    }
+
+    try {
+        const blog = await blogSchema.findOne({ slug }).orFail();
+        console.log("Blog Found:", blog);
+
+        return NextResponse.json(blog);
+    } catch (err) {
+        console.error("Error fetching blog:", err);
+        return NextResponse.json({ error: 'Blog not found.' }, { status: 404 });
+    }
 }
+
 
 export async function POST(req: NextRequest, { params }: IParams) {
 	console.log('params', req, params);
