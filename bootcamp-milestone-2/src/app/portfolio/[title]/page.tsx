@@ -366,7 +366,7 @@ type commentType = {
 // Function to fetch project data
 async function getProject(title: string) {
   try {
-    const res = await fetch(`http://localhost:3000/api/Project/${title}`, {
+    const res = await fetch(`/api/Project/${title}`, {
       cache: "no-store",
     });
     console.log("response - going thru?",res)
