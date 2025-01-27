@@ -24,7 +24,7 @@ export default function Resume() {
         <strong>California Polytechnic State University</strong> - San Luis Obispo, CA
       </p>
       <p>Expected June 2027</p>
-      <p>Bachelor of Science in Computer Engineering | GPA: 3.7 / 4.00 </p>
+      <p>Bachelor of Science in Computer Engineering | GPA: 3.81 / 4.00 </p>
       <p>
         Coursework: Assembly Language and Computer Design, Digital Design, Data Structures, 
         Project-Based OOP, Circuits I & II, Systems Programming, Physics & Calculus 
