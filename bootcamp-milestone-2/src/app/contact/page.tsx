@@ -91,10 +91,10 @@ export default function Contact() {
 
           <a>
             <a
-              href="https://www.linkedin.com/in/karina-lee-12kl/"
+              href="https://www.linkedin.com/in/karinaalee"
               className={styles.profile_link}
             >
-              Click Here For My LinkedIn
+              Click Here For My LinkedIn!
             </a>
           </a>
         </div>

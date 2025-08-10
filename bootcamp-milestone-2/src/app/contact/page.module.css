@@ -1,14 +1,12 @@
-
 .mainContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  background: linear-gradient(135deg, #e0f7fa, #215794);
   padding: 20px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
-
 
 .container {
   background: #ffffff;
@@ -22,7 +20,6 @@
   padding: 20px;
 }
 
-
 .title {
   font-size: 1rem;
   font-weight: bold;
@@ -30,7 +27,6 @@
   color: #004d40;
   text-align: center;
 }
-
 
 .contactMe {
   padding: 20px;
@@ -42,15 +38,11 @@
   gap: 15px;
 }
 
-
 .label {
   font-size: 1rem;
   margin-bottom: 5px;
   color: #00695c;
 }
-
-
-
 
 .button {
   padding: 10px 20px;
@@ -68,7 +60,6 @@
   background-color: #00695c;
   transform: scale(1.05);
 }
-
 
 .socialLinks {
   margin-top: 30px;
@@ -88,7 +79,6 @@
   transform: scale(1.1);
 }
 
-
 @media (max-width: 600px) {
   .title {
     font-size: 1.8rem;
@@ -99,4 +89,3 @@
     padding: 8px 15px;
   }
 }
- 

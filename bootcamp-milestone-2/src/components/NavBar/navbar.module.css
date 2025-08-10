@@ -1,28 +1,26 @@
-
-.navbar{
-    font-size: large;
-    font-family: "Times New Roman", Times, serif;
-    color: #85d4ee ;
-  }
-  .nav_list{
-    display:flex;
-    justify-content: center;
-    width:100vw;
-  
-  }
-  .page_title{
-    font-family: "Times New Roman", Times, serif;
-    color:rgb(221, 63, 182);
-    font-size: 1em;
-    text-align: center;
-    width:100vw;
-  }
-  .link{
-    width: 20vw;
-    text-align:center;
-  }
-  .link:hover {
-    color: white; 
-    background-color: #85d4ee; 
-    border-radius: 5px; 
-  }
+.navbar {
+  font-size: large;
+  font-family: "Times New Roman", Times, serif;
+  color: #3b8ba5;
+}
+.nav_list {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.page_title {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(28, 31, 87);
+  font-size: 1.5em;
+  text-align: center;
+  width: 100vw;
+}
+.link {
+  width: 20vw;
+  text-align: center;
+}
+.link:hover {
+  color: white;
+  background-color: #85d4ee;
+  border-radius: 5px;
+}

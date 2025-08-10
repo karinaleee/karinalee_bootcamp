@@ -3,152 +3,232 @@ import styles from "@/app/resume/page.module.css";
 import Footer from "@/components/footer/footer";
 
 export default function Resume() {
+  const rowStyle = {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "100%",
+  };
+
   return (
     <div className={styles.profile_container}>
-      {/* Contact Information */}
+      {/* Header */}
       <div className={styles.profile_header}>
-        <h1 className={styles.profile_name}>Karina Lee</h1>
-        <p>Portland, Oregon | (503) 432 - 3954 | Email: klee396@calpoly.edu</p>
-        <p>
+        <h1 className={styles.profile_name}>KARINA A. LEE</h1>
+        <p className={styles.profile_contact}>
+          (503) 432‑3954 • kkarina.lee05@gmail.com • 
           <a
-            href="https://www.linkedin.com/in/karina-lee-12kl/"
+            href="https://www.linkedin.com/in/karinaalee"
             className={styles.profile_link}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            LinkedIn
+            www.linkedin.com/in/karinaalee
           </a>
         </p>
       </div>
 
       {/* Education */}
       <section className={styles.profile_section}>
-        <h2 className={styles.profile_section_title}>Education</h2>
-        <div className={styles.profile_item}>
+        <h2 className={styles.profile_section_title}>EDUCATION</h2>
+        <div className={styles.profile_item} style={{ width: "100%" }}>
+          <div style={rowStyle}>
+            <strong>
+              California Polytechnic State University – College of Engineering
+            </strong>
+            <span>San Luis Obispo, CA</span>
+          </div>
+          <div style={rowStyle}>
+            <span>Bachelor of Science in Computer Engineering – GPA 3.71</span>
+            <span>June 2027</span>
+          </div>
           <p>
-            <strong>California Polytechnic State University</strong> - San Luis
-            Obispo, CA
+            Relevant Coursework: Computer Hardware Architecture & Design, Data
+            Structures, Object-Oriented Programming, Electrical & Electronic
+            Circuits, Computer Design & Assembly Language, Systems Programming,
+            Digital Logic Design
           </p>
-          <p>Expected June 2027</p>
-          <p>Bachelor of Science in Computer Engineering | GPA: 3.81 / 4.00 </p>
           <p>
-            Coursework: Assembly Language and Computer Design, Digital Design,
-            Data Structures, Project-Based OOP, Circuits I & II, Systems
-            Programming, Physics & Calculus
-          </p>
-          <p>
-            Societies & Activities: SWE (Society of Women’s Engineering), WISH
-            (Women Involved in Software/Hardware), Member of Alpha Phi Omega
-            (Professional Community Service Fraternity), Member of CSA (Chinese
-            Student Association)
+            Activities & Societies: Alpha Phi Omega, Chinese Student Association
           </p>
         </div>
       </section>
 
-      {/* Experience */}
+      {/* Experiences */}
       <section className={styles.profile_section}>
-        <h2 className={styles.profile_section_title}>
-          <strong>Experience</strong>
-        </h2>
+        <h2 className={styles.profile_section_title}>EXPERIENCES</h2>
 
-        <div className={styles.profile_item}>
-          <p>
-            <strong>
-              California Polytechnic State University - IT Department
-            </strong>{" "}
-            - San Luis Obispo, CA
-          </p>
-          <p> IT Specialist Cilent Services (Oct 2024 - Current)</p>
+        {[
+          {
+            title: "IT Support Intern",
+            org: "O’Connor Construction Management, Inc.",
+            loc: "Irvine, CA",
+            date: "June 2025 – Sept 2025",
+            bullets: [
+              "Documented technical processes and policies, audited access controls, and maintained accurate inventory records",
+            ],
+          },
+          {
+            title: "Software Developer",
+            org: "Hack4Impact",
+            loc: "San Luis Obispo, CA",
+            date: "Oct 2024 – Present",
+            bullets: [
+              "Developing a full‑stack application for Octagon Barn using TypeScript, React, and Next.js",
+              "Constructing the frontend with React and TypeScript, enabling user authentication and document management",
+              "Implementing an administrative dashboard and integrated API calls for user notifications",
+            ],
+          },
+          {
+            title: "IT Student Assistant – Client Services",
+            org: "Information Technology Services at California Polytechnic State University",
+            loc: "San Luis Obispo, CA",
+            date: "Oct 2024 – Present",
+            bullets: [
+              "Troubleshot 100+ hardware and software computers for the Administration/President’s Office",
+              "Strong proficiency in debugging operating systems, Windows and macOS",
+              "Delivered excellent, respectful customer service to support faculty and students",
+            ],
+          },
+          {
+            title: "Low Voltage Team Member",
+            org: "Cal Poly Prototype Vehicles Laboratory",
+            loc: "San Luis Obispo, CA",
+            date: "Oct 2024 – Present",
+            bullets: [
+              "Designed and implemented a Controller Area Network (CAN) bus communication system using Arduino and C++",
+              "Collaborated with multidisciplinary teams to advance the vehicle’s performance and efficiency",
+            ],
+          },
+          {
+            title: "Student Facilities / Lab Technician Support",
+            org: "Computer Engineering Department at California Polytechnic State University",
+            loc: "San Luis Obispo, CA",
+            date: "Oct 2024 – Present",
+            bullets: [
+              "Assisted students and faculty in troubleshooting lab resources, such as multimeters and FPGA boards",
+              "Maintained and organized lab facilities, ensuring resource accessibility and functionality for students",
+            ],
+          },
+          {
+            title: "Food Server",
+            org: "Laurel Parc Central Bethany Senior Living",
+            loc: "Portland, OR",
+            date: "Sept 2022 – May 2025",
+            bullets: [
+              "Served food and drinks to satisfy seniors and attended to their needs through personalized service",
+              "Organized the dining area and coordinated with other servers and chefs",
+            ],
+          },
+        ].map((exp) => (
+          <div
+            key={exp.title}
+            className={styles.profile_item}
+            style={{ width: "100%" }}
+          >
+            <div style={rowStyle}>
+              <strong>{exp.title}</strong>
+              <span>{exp.loc}</span>
+            </div>
+            <div style={rowStyle}>
+              <em>{exp.org}</em>
+              <span>{exp.date}</span>
+            </div>
+            <ul>
+              {exp.bullets.map((b) => (
+                <li key={b}>{b}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+
+      {/* Projects */}
+      <section className={styles.profile_section}>
+        <h2 className={styles.profile_section_title}>PROJECTS</h2>
+        <div className={styles.profile_item} style={{ width: "100%" }}>
+          <div style={rowStyle}>
+            <strong>RISC‑V Otter MCU</strong>
+            <span>San Luis Obispo, CA</span>
+          </div>
+          <div style={rowStyle}>
+            <em>Computer Architecture</em>
+            <span>Dec 2024</span>
+          </div>
           <ul>
             <li>
-              Facilitated office hours to supports&apos; students understanding
-              of Object-Oriented Programming conceptsTroubleshoot hardware and
-              software issues for the Administration/President’s Office.
+              Designed a simple RISC‑V processor using SystemVerilog with
+              integrated ALU, Decoder, FSM, and Interrupts
             </li>
             <li>
-              Strong proficiency in debugging operating systems, Windows and
-              macOS
+              Integrated pipelining of the Otter with hazard and forwarding
+              detection
             </li>
           </ul>
         </div>
+      </section>
 
-        <div className={styles.profile_item}>
-          <p>
-            <strong>Hack4Impact</strong> - Software Developer (Sept 2024 -
-            Current)
-          </p>
-          <p>Programming Languages: HTML, CSS, Next.js, MongoDB, Git, React</p>
-          <ul>
-            <li>
-              Collaborating in a team of 16 to engage in creating webpages for
-              small nonprofit businesses
-            </li>
-          </ul>
-        </div>
-
-        <div className={styles.profile_item}>
-          <p>
-            <strong>Cal Poly Prototype Vehicle Laboratory</strong> - Low Voltage
-            Team Member (Oct 2024 – Current)
-          </p>
-          <p>Languages: CANBUS, C++</p>
-          <ul>
-            <li>
-              Implemented a CAN bus communication system using Arduino for
-              precise control timing to coordinate with the 3 contractors
-            </li>
-          </ul>
-        </div>
-
-        <div className={styles.profile_item}>
-          <p>
-            <strong>
-              Computer Engineering Department at California Polytechnic State
-              University
-            </strong>{" "}
-            - San Luis Obispo, CA
-          </p>
-          <p>Student Lab Technician Support (Oct 2024 - Current)</p>
-          <ul>
-            <li>
-              Assist students and faculty in troubleshooting lab resources, e.g
-              multimeters, FPGA boards
-            </li>
-            <li>
-              Contribute to the organization of the department by proactively
-              assisting in day-to-day tasks{" "}
-            </li>
-          </ul>
-        </div>
-
-        <div className={styles.profile_item}>
-          <p>
-            <strong>Central Bethany Laurel Parc Senior Living</strong> -
-            Portland, OR
-          </p>
-          <p>Food Server (Sept 2022 - Current)</p>
-          <ul>
-            <li>
-              Serving food and drinks to satisfy the seniors and attending to
-              their needs through personalized service{" "}
-            </li>
-            <li>
-              Organizing the dining area and coordinating with other servers and
-              chefs
-            </li>
-          </ul>
-        </div>
+      {/* Leadership */}
+      <section className={styles.profile_section}>
+        <h2 className={styles.profile_section_title}>LEADERSHIP</h2>
+        {[
+          {
+            title: "Connections Chair",
+            org: "Society of Women Engineers",
+            loc: "San Luis Obispo, CA",
+            date: "May 2025 – Present",
+            bullets: [
+              "Planned and organized diversity‑focused events to promote inclusion in academic and professional spaces",
+            ],
+          },
+          {
+            title: "Diversity & Outreach Officer",
+            org: "Women in Software/Hardware",
+            loc: "San Luis Obispo, CA",
+            date: "May 2025 – Present",
+            bullets: [
+              "Organized outreach events and built partnerships with schools and campus programs to support underrepresented students",
+            ],
+          },
+        ].map((lead) => (
+          <div
+            key={lead.title}
+            className={styles.profile_item}
+            style={{ width: "100%" }}
+          >
+            <div style={rowStyle}>
+              <strong>{lead.title}</strong>
+              <span>{lead.loc}</span>
+            </div>
+            <div style={rowStyle}>
+              <em>{lead.org}</em>
+              <span>{lead.date}</span>
+            </div>
+            <ul>
+              {lead.bullets.map((b) => (
+                <li key={b}>{b}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
 
       {/* Skills */}
       <section className={styles.profile_section}>
-        <h2 className={styles.profile_section_title}>Skills</h2>
-        <div className={styles.profile_item}>
+        <h2 className={styles.profile_section_title}>SKILLS</h2>
+        <div className={styles.profile_item} style={{ width: "100%" }}>
           <p>
-            Programming Languages: Java, Python, System Verilog, HTML, CSS,
-            RISC-V Assembly, Digital Multimeter
+            Technical Skills: Python, Java, C++, SystemVerilog, Verilog, RISC‑V
+            Assembly Language, MongoDB, Vercel, React, JavaScript, LTSpice, HTML
+            & CSS, Next.js, KiCAD, FSM Design
           </p>
-          <p>Languages: English, Chinese</p>
+          <p>
+            Test Equipment: Digital Multimeter, Source Meter, Function
+            Generator, Oscilloscope
+          </p>
+          <p>Languages: Chinese (Conversational Proficiency)</p>
         </div>
       </section>
+
       <Footer />
     </div>
   );

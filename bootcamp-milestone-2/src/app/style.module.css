@@ -1,39 +1,36 @@
 .pageTitle {
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    color: #031b28;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 50px;
-    font-style: italic;
-    font-weight: bold;
-  }
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: #031b28;
+  font-family: "Times New Roman", Times, serif;
+  padding: 50px;
+  font-style: italic;
+  font-weight: bold;
+  background-color: #edabd5;
+}
 
+.about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 200px;
+  padding-left: 200px;
+  background-color: #d9b6cc;
+}
 
-  .about {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 200px;
-    padding-left:200px;
-  }
-  
-  .about-image img {
-    border-radius: 3px;
-  }
-  
-  .aboutText {
-    flex: 1;
-    margin-left: 20px;
-    color: #0077B6;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    max-width: 900px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  
+.about-image img {
+  border-radius: 3px;
+}
 
-
-
+.aboutText {
+  flex: 1;
+  margin-left: 20px;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  max-width: 900px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
